@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lit Components Demo</title>
+  <script type="module" src="./dist/bundle.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .component-demo {
+      margin-bottom: 40px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lit Components Demo</h1>
+  
+  <div class="component-demo">
+    <h2>Button Component</h2>
+    <my-button>Click Me</my-button>
+    <my-button variant="primary">Primary Button</my-button>
+    <my-button variant="secondary">Secondary Button</my-button>
+    <my-button disabled>Disabled Button</my-button>
+  </div>
+  
+  <div class="component-demo">
+    <h2>Input Component</h2>
+    <my-input label="Nome" placeholder="Inserisci il tuo nome"></my-input>
+    <my-input label="Email" type="email" placeholder="example@email.com"></my-input>
+    <my-input label="Password" type="password" required></my-input>
+  </div>
+  
+  <div class="component-demo">
+    <h2>Tile Component</h2>
+    <my-tile title="Titolo Tile" description="Questa è una descrizione della tile"></my-tile>
+    <my-tile title="Tile con icona" icon="star" description="Tile con un'icona"></my-tile>
+  </div>
+  
+  <div class="component-demo">
+    <h2>Banner Component</h2>
+    <my-banner message="Operazione completata con successo!" type="success"></my-banner>
+    <my-banner message="Attenzione: ci sono alcuni warning!" type="warning"></my-banner>
+    <my-banner message="Si è verificato un errore!" type="error"></my-banner>
+  </div>
+  
+  <div class="component-demo">
+    <h2>Form Example</h2>
+    <my-form id="contactForm">
+      <my-input label="Nome Completo" name="fullName" required></my-input>
+      <my-input label="Email" name="email" type="email" required></my-input>
+      <my-input label="Messaggio" name="message" multiline></my-input>
+      <my-button type="submit" variant="primary">Invia</my-button>
+    </my-form>
+  </div>
+</body>
+</html>
